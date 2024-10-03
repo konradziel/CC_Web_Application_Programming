@@ -1,0 +1,77 @@
+/* Globalne style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: ;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Nagłówek */
+.header {
+    background-color: #3f51b5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Menu nawigacyjne */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu ul li a:hover {
+    background-color: #575757;
+}
+
+/* Główna zawartość */
+.content {
+    padding: 20px;
+    text-align: justify;
+}
+
+.image-wrap {
+    margin-top: 20px;
+}
+
+.image-wrap img {
+    float: left;
+    margin-right: 20px;
+    width: 275px;
+    height: auto;
+}
+
+.image-wrap p {
+    text-align: justify;
+}
+
+/* Stopka */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
