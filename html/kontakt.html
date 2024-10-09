@@ -4,55 +4,59 @@
     <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
     <meta http-equiv="Content-Language" content="pl" />
     <meta name="Author" content="Konrad Zieliński" />
-    <title>Historia lotów kosmicznych</title>
+    <title>Kontakt - Historia lotów kosmicznych</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <!-- Struktura tabeli -->
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!-- Główny kontener strony -->
+    <div class="container">
         <!-- Nagłówek strony -->
-        <tr>
-            <td colspan="3" class="header">
-                <h1>Kontakt</h1>
-            </td>
-        </tr>
+        <header class="header">
+            <h1>Kontakt</h1>
+        </header>
 
         <!-- Menu nawigacyjne -->
-        <tr>
-            <td colspan="3" class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Strona główna</a></li>
-                        <li><a href="poczatki.html">Początki</a></li>
-                        <li><a href="wspolczesnosc.html">Współczesność</a></li>
-                        <li><a href="galeria.html">Galeria</a></li>
-                        <li><a href="kontakt.html">Kontakt</a></li>
-                    </ul>
-                </nav>
-            </td>
-        </tr>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Strona główna</a></li>
+                <li><a href="poczatki.html">Początki</a></li>
+                <li><a href="wspolczesnosc.html">Współczesność</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
 
-        <!-- Główna zawartość strony (3 kolumny: lewa i prawa pusta, a śrdokowa z treścią) -->
-        <tr>
-            <td class="left-panel" width="20%">
+        <!-- Główna zawartość strony -->
+        <div class="main-content">
+            <aside class="left-panel">
                 <!-- Lewy panel, można dodać coś później -->
-            </td>
+            </aside>
 
-            <td class="content" width="60%">
-                <!-- Środkowy panel, można dodać coś później -->
-            </td>
+            <section class="content">
+                <h2>Formularz kontaktowy</h2>
+                <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                    <label for="name">Imię:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+            
+                    <label for="email">E-mail:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+            
+                    <label for="message">Wiadomość:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+                    <button type="submit">Wyślij wiadomość</button>
+                </form>
+            </section>
 
-            <td class="right-panel" width="20%">
+            <aside class="right-panel">
                 <!-- Prawy panel, można dodać coś później -->
-            </td>
-        </tr>
+            </aside>
+        </div>
 
         <!-- Stopka strony -->
-        <tr>
-            <td colspan="3" class="footer">
-                <p>&copy; 2024 Konrad Zieliński - Historia lotów kosmicznych</p>
-            </td>
-        </tr>
-    </table>
+        <footer class="footer">
+            <p>&copy; 2024 Konrad Zieliński - Historia lotów kosmicznych</p>
+        </footer>
+    </div>
 </body>
 </html>

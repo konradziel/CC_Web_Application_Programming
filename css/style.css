@@ -1,18 +1,30 @@
 /* Globalne style */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+html, body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: ;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
 }
 
-table {
+/* Kontener główny */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     width: 100%;
-    border-collapse: collapse;
-    margin: 0 auto;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
+    background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    flex-grow: 1;
 }
 
 /* Nagłówek */
@@ -24,16 +36,19 @@ table {
 }
 
 /* Menu nawigacyjne */
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.menu {
     background-color: #333;
     text-align: center;
 }
 
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
 .menu ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -47,25 +62,74 @@ table {
     background-color: #575757;
 }
 
-/* Główna zawartość */
-.content {
+/* Główna zawartość strony */
+.main-content {
+    display: flex;
+    flex: 1;
     padding: 20px;
-    text-align: justify;
+    flex-grow: 1;
+}
+
+.left-panel, .right-panel {
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0); /* Jest na 0 żeby nie było widać */
+    padding: 10px;
+}
+
+/* Zawartość główna */
+.content {
+    width: 60%;
+    text-align: center;
 }
 
 .image-wrap {
     margin-top: 20px;
 }
 
-.image-wrap img {
+.float-left {
     float: left;
     margin-right: 20px;
-    width: 275px;
+    width: 175px;
+    height: auto;
+}
+
+.float-right {
+    float: right;
+    margin-right: 20px;
+    width: 175px;
     height: auto;
 }
 
 .image-wrap p {
-    text-align: justify;
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.gallery-item {
+    width: 200px; /* Szerokość obrazka */
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%; /* Obrazki będą responsywne */
+    height: auto;
+    border-radius: 5px; /* Zaokrąglone rogi */
+}
+
+.description {
+    margin-top: 10px; /* Odstęp między obrazkiem a opisem */
 }
 
 /* Stopka */
