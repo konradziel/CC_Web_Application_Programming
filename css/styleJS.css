@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     font-family: Arial, sans-serif;
     font-size: 24px;
-    background-image: url('../images/background.jpg');
+    background-color: rgb(255, 255, 255);
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
@@ -19,12 +19,12 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
     background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     flex-grow: 1;
 }
+
 
 /* Nagłówek */
 .header {
@@ -32,6 +32,10 @@ html, body {
     color: white;
     text-align: center;
     padding: 20px;
+}
+
+#zegarek, #data {
+    margin-top: 20px;
 }
 
 /* Menu nawigacyjne */
