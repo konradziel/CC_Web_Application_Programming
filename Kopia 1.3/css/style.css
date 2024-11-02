@@ -131,29 +131,6 @@ html, body {
     margin-top: 10px; /* Odstęp między obrazkiem a opisem */
 }
 
-.test-block {
-    width: 200px;
-    border: 2px solid rgb(35, 32, 203);
-    background-color: rgba(38, 35, 212, 0.9);
-    text-align: center;
-    color: white;
-    padding: 20px;
-    cursor: pointer;
-    display: flex;
-    margin: 10px auto;
-    justify-content: center;
-    align-items: center;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select: none;
-}
-
-#zegarek, #data {
-    margin-top: 20px;
-}
-
 /* Stopka */
 .footer {
     text-align: center;
