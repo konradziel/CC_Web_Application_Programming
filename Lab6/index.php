@@ -7,13 +7,13 @@
         $_GET['idp'] = 'glowna';
     }
 
-    if ($_GET['idp'] == 'glowna') $strona = 'html/glowna.html';
-    if ($_GET['idp'] == 'poczatki') $strona = 'html/poczatki.html';
-    if ($_GET['idp'] == 'wspolczesnosc') $strona = 'html/wspolczesnosc.html';
-    if ($_GET['idp'] == 'galeria') $strona = 'html/galeria.html';
-    if ($_GET['idp'] == 'kontakt') $strona = 'html/kontakt.html';
-    if ($_GET['idp'] == 'js_test') $strona = 'html/js_test.html';
-    if ($_GET['idp'] == 'filmy') $strona = 'html/filmy.html';
+    if ($_GET['idp'] == 'glowna') $strona = 'glowna';
+    if ($_GET['idp'] == 'poczatki') $strona = 'poczatki';
+    if ($_GET['idp'] == 'wspolczesnosc') $strona = 'wspolczesnosc';
+    if ($_GET['idp'] == 'galeria') $strona = 'galeria';
+    if ($_GET['idp'] == 'kontakt') $strona = 'kontakt';
+    if ($_GET['idp'] == 'js_test') $strona = 'js_test';
+    if ($_GET['idp'] == 'filmy') $strona = 'filmy';
 
     echo '<link rel="stylesheet" href="css/style.css" />';
 ?>
@@ -61,6 +61,7 @@
                 <?php
                     if (isset($_GET['idp']) && $_GET['idp'] !== '') {
                         include('showpage.php');
+                        PokazStrone($strona);
                     } else {
                         echo "Wybrana strona nie istnieje.";
                     }
