@@ -1,0 +1,61 @@
+<section>
+<FORM METHOD="POST" NAME="background">
+        <INPUT TYPE="button" VALUE="żółty" ONCLICK="changeBackground('#FFF000')">
+        <INPUT TYPE="button" VALUE="czarny" ONCLICK="changeBackground('#000000')">
+        <INPUT TYPE="button" VALUE="biały" ONCLICK="changeBackground('#FFFFFF')">
+        <INPUT TYPE="button" VALUE="zielony" ONCLICK="changeBackground('#00FF00')">
+        <INPUT TYPE="button" VALUE="niebieski" ONCLICK="changeBackground('#0000FF')">
+        <INPUT TYPE="button" VALUE="pomarańczowy" ONCLICK="changeBackground('#FF8000')">
+        <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground('#c0c0c0')">
+        <INPUT TYPE="button" VALUE="czerowny" ONCLICK="changeBackground('#FF0000')">
+</FORM>         
+</section>
+
+
+<div id="zegarek"></div>
+<div id="data"></div>
+
+<div id="animacjaTest" class="test-block">Kliknij, a się powiększę</div>
+    <script>
+        $("#animacjaTest").on("click", function(){
+            $(this).animate({
+                width: "500px",
+                opacity: 0.4,
+                fontSize:"3em",
+                borderwidth: "10px"
+            }, 1500);
+        });
+    </script>    
+    
+    
+    <div id="animacjaTest2" class="test-block">Najedź kursorem, a się powiększe</div>    
+    <script>
+        $("#animacjaTest2").on({
+            "mouseover" : function() {
+                $(this).animate({
+                    width: 300
+                }, 800);
+            },
+            "mouseout" : function() {
+                $(this).animate({
+                    width: 200
+                }, 800);
+            }
+        });
+    </script>
+
+    <div id="animacjaTest3" class="test-block">Kliknij a się powiększę</div>
+    <script>
+        $("#animacjaTest3").on("click", function(){
+            if (!$(this).is(":animated")) {
+                $(this).animate({
+                    width: "+=" + 50,
+                    height: "+=" + 10,
+                    opacity: "-=" + 0.1,
+                    duration : 3000
+                });
+            }
+        });
+    </script>
+
+</div>
