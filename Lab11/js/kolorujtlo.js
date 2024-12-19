@@ -49,13 +49,5 @@ function changeBackground(hexNumber) {
     }
 }
 
-function changeBackgroundRandom() {
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    const hexColor = '#' + decToHex(r) + decToHex(g) + decToHex(b);
-    changeBackground(hexColor);
-}
-
 // Reset decimal to 0
 decimal = 0;
