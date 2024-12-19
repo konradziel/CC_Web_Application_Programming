@@ -1,6 +1,15 @@
 let computed = false;
 let decimal = 0;
 
+function decToHex(x) {
+    x = x.toString(16);
+    return (x.length == 1) ? '0' + x : x;
+}
+
+function hexToDec(x) {
+    return parseInt(x, 16);
+}
+
 const convert = (entryform, from, to) => {
     const convertfrom = from.selectedIndex;
     const convertto = to.selectedIndex;
@@ -33,38 +42,12 @@ const clearForm = (form) => {
     decimal = 0;
 };
 
-/**
- * Moduł zmiany koloru tła
- * Zawiera funkcje do manipulacji kolorem tła strony
- */
-
-/**
- * Zmienia kolor tła elementu na wybrany
- * @param {string} color - Nazwa lub kod koloru do ustawienia
- */
-function changeBackground(color) {
-    document.body.style.backgroundColor = color;
+function changeBackground(hexNumber) {
+    const container = document.querySelector('.container');
+    if (container) {
+        container.style.backgroundColor = hexNumber;
+    }
 }
 
-/**
- * Generuje losowy kolor w formacie heksadecymalnym
- * @returns {string} Kolor w formacie #RRGGBB
- */
-function getRandomColor() {
-    // Generowanie losowych wartości dla składowych RGB
-    const r = Math.floor(Math.random() * 256);
-    const g = Math.floor(Math.random() * 256);
-    const b = Math.floor(Math.random() * 256);
-    
-    // Konwersja na format heksadecymalny
-    return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
-}
-
-/**
- * Zmienia kolor tła na losowy
- * Funkcja łączy generowanie losowego koloru ze zmianą tła
- */
-function changeBackgroundRandom() {
-    const randomColor = getRandomColor();
-    changeBackground(randomColor);
-}
+// Reset decimal to 0
+decimal = 0;
