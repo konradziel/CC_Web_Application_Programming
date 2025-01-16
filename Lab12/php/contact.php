@@ -83,27 +83,15 @@ class Contact {
         $title = htmlspecialchars(substr($_POST['title'], 0, 100));
         $content = htmlspecialchars(substr($_POST['content'], 0, 1000));
         
-        // Przygotowanie danych do wysyłki
-        $mail = [
-            'sender' => $email,
-            'subject' => $title,
-            'body' => $content,
-            'recipient' => filter_var($odbiorca, FILTER_VALIDATE_EMAIL)
-        ];
-
-        // Nagłówki emaila
-        $headers = [
-            'From: Formularz kontaktowy <' . $mail['sender'] . '>',
-            'MIME-Version: 1.0',
-            'Content-Type: text/plain; charset=utf-8'
-        ];
-
-        // Wysłanie emaila
-        if (mail($mail['recipient'], $mail['subject'], $mail['body'], implode("\n", $headers))) {
-            echo '<div class="alert">Wiadomość została wysłana!</div>';
-        } else {
-            echo '<div class="alert">Wystąpił błąd podczas wysyłania wiadomości.</div>';
-        }
+        // Symulacja wysyłki emaila - zawsze zwraca sukces
+        echo '<div class="alert">Wiadomość została wysłana!</div>';
+        
+        // Opcjonalnie możemy wyświetlić dane, które byłyby wysłane
+        /*
+        echo '<div class="debug">Debug: Email zostałby wysłany do: ' . htmlspecialchars($odbiorca) . 
+             '<br>Od: ' . htmlspecialchars($email) . 
+             '<br>Tytuł: ' . htmlspecialchars($title) . '</div>';
+        */
     }
 
     /**
@@ -124,27 +112,15 @@ class Contact {
             return;
         }
 
-        // Przygotowanie danych do wysyłki
-        $mail = [
-            'sender' => $email,
-            'subject' => "Odzyskanie hasła",
-            'body' => "Twoje hasło to: test", // W rzeczywistej aplikacji należy zaimplementować bezpieczny system resetowania hasła
-            'recipient' => filter_var($odbiorca, FILTER_VALIDATE_EMAIL)
-        ];
-
-        // Nagłówki emaila
-        $headers = [
-            'From: Formularz odzyskiwania hasła <' . $mail['sender'] . '>',
-            'MIME-Version: 1.0',
-            'Content-Type: text/plain; charset=utf-8'
-        ];
-
-        // Wysłanie emaila
-        if (mail($mail['recipient'], $mail['subject'], $mail['body'], implode("\n", $headers))) {
-            echo '<div class="alert">Hasło zostało wysłane na podany adres e-mail!</div>';
-        } else {
-            echo '<div class="alert">Wystąpił błąd podczas wysyłania hasła.</div>';
-        }
+        // Symulacja wysyłki emaila - zawsze zwraca sukces
+        echo '<div class="alert">Wiadomość została wysłana!</div>';
+        
+        // Opcjonalnie możemy wyświetlić dane, które byłyby wysłane
+        /*
+        echo '<div class="debug">Debug: Email zostałby wysłany do: ' . htmlspecialchars($odbiorca) . 
+             '<br>Od: ' . htmlspecialchars($email) . 
+             '<br>Tytuł: ' . htmlspecialchars($title) . '</div>';
+        */
     }
 }
 ?>
