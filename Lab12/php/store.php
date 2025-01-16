@@ -279,7 +279,7 @@ class Store {
     }
 
     private function renderCategoryTree($categories, $level = 0) {
-        $output = '<ul class="category-tree' . ($level === 0 ? ' main-tree' : '') . '">';
+        $output = '<ul class="category-tree style="white-space: normal' . ($level === 0 ? ' main-tree' : '') . '">';
         foreach ($categories as $category) {
             $hasChildren = !empty($category['children']);
             $output .= '<li class="category-item' . ($hasChildren ? ' has-children' : ' no-children') . '">';

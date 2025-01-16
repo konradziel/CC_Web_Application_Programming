@@ -68,7 +68,7 @@ class Category {
 
         // Wizualizacja struktury drzewiastej
         echo '<div class="category-tree-container">';
-        echo '<div class="category-tree">';
+        echo '<div class="category-tree" style="white-space: pre">';
         echo '<h3>Struktura kategorii</h3>';
 
         // Pobierz wszystkie kategorie ponownie dla drzewa
@@ -406,7 +406,7 @@ class Category {
             }
 
             echo '<h2 class="category-tree-title">Struktura kategorii</h2>';
-            echo '<pre class="category-tree">';
+            echo '<pre class="category-tree" style="white-space: pre;">';
             echo $this->WyswietlDrzewoKategorii($categories);
             echo '</pre>';
         } else {
